@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>learnVue.js!</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
+
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <div>{{ msgA }}</div>
+        <div>{{ msgB }}</div>
+        <button v-on:click="changeMessage"> change! </button>
+    </div>
+
     <script>
-        var div = document.querySelector('#app');
-        console.log(div);
+        const vm = new Vue({
+            el: '#app',
+            data: {
+                msgA: 'Message A.'
+            },
+            methods: {
+                changeMessage() {
+                    this.msgA = 'Changed message A!'
+                    this.msgB = 'Changed message B!'
+                }
+            }
+        })
+
+        console.log(vm);
     </script>
 </body>
+
 </html>
