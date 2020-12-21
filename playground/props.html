@@ -2,36 +2,6 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>learnVue.js!</title>
-</head>
-
-<body>
-    <div id="app">
-        <!-- <app-header v-vind: 프롭스 속성이름 = "상위 콤포넌트의 데이터 이름"></app-header> -->
-        <app-header v-vind:propsdata="message"></app-header>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script>
-        var appHeader = {
-            template: '<h1>header</h1>',
-            props: ['propsdata']
-        }
-        new Vue({
-            el: '#app',
-            components: {
-                'app-header': appHeader
-            },
-            data: {
-                message: 'hi'
-            }
-        })
-    </script>
-</body>
-
-=======
-<head>
      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <title>learnVue.js!</title>
 </head>
