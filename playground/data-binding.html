@@ -2,49 +2,49 @@
 <html lang="en">
 
 <head>
-     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
-     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <title>learnVue.js!</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<title>learnVue.js!</title>
 </head>
 
 <body>
-    <div id="app">
-    	<p v-bind:id="uuid" v-bind:class="name">{{ num }}</p>
-    	<!-- <p id="abc1234">{{ num }} </p> -->
-    	<p>{{ doubleNum }}</p>
-    	<div v-if="loading">
-    		Loading...
-    	</div>
-    	<div v-else>
-    		test user has been logged in
-    	</div>
-    	<div v-show="loading">
-    		Loading...
-    	</div>
-    	
-    	<!-- ÀÎÇ² ¹Ú½º¸¦ ¸¸µé°í ÀÔ·ÂµÈ °ªÀ» p ÅÂ±×¿¡ Ãâ·ÂÇØº¸±â -->
-    	<input type="text" v-model="message">
-    	<p>{{ message }}</p>
-    	
-    </div>
-<script>
-	new Vue({
-		el:'#app',
-		data:{
-			num: 10,
-			uuid: 'abc1234',
-			name: 'text-blue',
-			loading:true,
-			message:''
-		},
-		computed:{
-			doubleNum: function(){
-				return this.num * 2;
+	<div id="app">
+		<p v-bind:id="uuid" v-bind:class="name">{{ num }}</p>
+		<!-- <p id="abc1234">{{ num }} </p> -->
+		<p>{{ doubleNum }}</p>
+		<div v-if="loading">
+			Loading...
+		</div>
+		<div v-else>
+			test user has been logged in
+		</div>
+		<div v-show="loading">
+			Loading...
+		</div>
+
+		<!-- ï¿½ï¿½Ç² ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·Âµï¿½ ï¿½ï¿½ï¿½ï¿½ p ï¿½Â±×¿ï¿½ ï¿½ï¿½ï¿½ï¿½Øºï¿½ï¿½ï¿½ -->
+		<input type="text" v-model="message">
+		<p>{{ message }}</p>
+
+	</div>
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+				num: 10,
+				uuid: 'abc1234',
+				name: 'text-blue',
+				loading: true,
+				message: ''
+			},
+			computed: {
+				doubleNum: function () {
+					return this.num * 2;
+				}
 			}
-		}
-	})
-</script>
+		})
+	</script>
 </body>
 
 </html>

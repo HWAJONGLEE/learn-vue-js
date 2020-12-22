@@ -2,35 +2,36 @@
 <html lang="en">
 
 <head>
-     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
-     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <title>learnVue.js!</title>
-    <style>
-    .warning{
-    	color:red;
-    }
-    </style>
-</head>
-<body>
-    <div id="app">
-    	<p v-bind:class="errorTextColor">Hello</p>
-    </div>
-<script>
-	new Vue({
-		el: '#app',
-		data: {
-			/* cname: 'blue-text', */
-			isError:false
-		},
-		computed:{
-			errorTextColor: function(){
-				return this.isError ? 'warning' : null;
-			}
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<title>learnVue.js!</title>
+	<style>
+		.warning {
+			color: red;
 		}
-	});
-	
-</script>
+	</style>
+</head>
+
+<body>
+	<div id="app">
+		<p v-bind:class="errorTextColor">Hello</p>
+	</div>
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+				/* cname: 'blue-text', */
+				isError: false
+			},
+			computed: {
+				errorTextColor: function () {
+					return this.isError ? 'warning' : null;
+				}
+			}
+		});
+
+	</script>
 </body>
 
 </html>
